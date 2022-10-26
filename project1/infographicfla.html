@@ -14,15 +14,79 @@
 <title>infographicfla</title>
 <!-- write your code here -->
 <style>
+
+@keyframes pulse {
+	0%{
+		transform: scale(0.8);
+		box-shadow: 0 0 0 0 rgba(255, 255, 0, 0.7);
+	}
+	70%{
+		transform: scale(1);
+		box-shadow: 0 0 0 0.8em rgba(255, 255, 0, 0.4);
+	}
+	100%{
+		transform: scale(0.8);
+		box-shadow: 0 0 0 0 rgba(255, 255, 0, 0);
+	}
+}
+
   #animation_container {
 	position:absolute;
 	margin:auto;
 	left:0;right:0;
 	top:0;bottom:0;
   }
+
+  a{
+	color: black;
+	text-decoration: none;
+  }
+  .back{
+	position: fixed;
+	width: 4em;
+	height: 4em;
+	background-color: yellow;
+	border: 3px solid black;
+	border-radius: 50%;
+	top: 50px;
+	left: 50px;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  .fa-arrow-left{
+	font-size: 3em;
+  }
+  .back:hover{
+	cursor: pointer;
+	animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moveShip {
+    0%{
+        transform: translateX(200%) scaleX(-1);
+    }
+    100%{
+        transform: translateX(-100%) scaleX(-1);
+    }
+}
+
+
+  #ship{
+    transform: translateX(200%) scaleX(-1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 120%;
+}
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="infographicfla.js"></script>
+<script src="https://kit.fontawesome.com/c25dad79f1.js" crossorigin="anonymous"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -67,10 +131,15 @@ function handleComplete(evt,comp) {
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
+	<a href="../index.html#projects" id="back-link"><div class="back"><i class="fa-solid fa-arrow-left"></i></div></a>
+	<img src="ship.svg" alt="ship" id="ship">
+
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1920px; height:1000px">
 		<canvas id="canvas" width="1920" height="1000" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1920px; height:1000px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
+
+	<script src="script.js"></script>
 </body>
 </html>
