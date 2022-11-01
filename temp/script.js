@@ -172,14 +172,3 @@ pro1_img.onclick = (e) => {
         window.location = "project1/infographicfla.html";
     }, 2000);
 }
-
-//for transition:
-let pro2_img = document.getElementById('pro2-link');
-
-pro2_img.onclick = (e) => {
-    e.preventDefault();
-    ship.style.animation = "moveShip 6s";
-    setTimeout(function(){
-        window.location = "project2/saminspace.html";
-    }, 2000);
-}
