@@ -74,6 +74,15 @@
     }
 }
 
+@keyframes moveBack {
+    0%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
 
   #ship{
     transform: translateX(200%) scaleX(-1);
@@ -82,6 +91,17 @@
     left: 0;
     z-index: 10000;
     height: 120%;
+	animation-fill-mode: forwards;
+}
+
+#homeBack{
+	transform: translateX(200%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	height: 100%;
+	animation-fill-mode: forwards;
 }
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -133,6 +153,7 @@ function handleComplete(evt,comp) {
 <body onload="init();" style="margin:0px;">
 	<a href="../index.html#projects" id="back-link"><div class="back"><i class="fa-solid fa-arrow-left"></i></div></a>
 	<img src="ship.svg" alt="ship" id="ship">
+	<img src="homePageBackground.png" alt="homeBackground" id="homeBack">
 
 	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1920px; height:1000px">
 		<canvas id="canvas" width="1920" height="1000" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>

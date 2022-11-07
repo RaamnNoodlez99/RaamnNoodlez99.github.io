@@ -164,13 +164,16 @@ slider();
 //for transition:
 let pro1_img = document.getElementById('pro1-link');
 let ship = document.getElementById('ship');
+let proj1Back = document.getElementById('proj1Background');
+let proj2Back = document.getElementById('proj2Background');
 
 pro1_img.onclick = (e) => {
     e.preventDefault();
-    ship.style.animation = "moveShip 6s";
+    ship.style.animation = "moveShip 5500ms";
+    proj1Back.style.animation = "moveProj 5500ms";
     setTimeout(function(){
         window.location = "project1/infographicfla.html";
-    }, 2000);
+    }, 5000);
 }
 
 //for transition:
@@ -179,7 +182,8 @@ let pro2_img = document.getElementById('pro2-link');
 pro2_img.onclick = (e) => {
     e.preventDefault();
     ship.style.animation = "moveShip 6s";
+    proj2Back.style.animation = "moveProj 5500ms";
     setTimeout(function(){
         window.location = "project2/saminspace.html";
-    }, 2000);
+    }, 5000);
 }

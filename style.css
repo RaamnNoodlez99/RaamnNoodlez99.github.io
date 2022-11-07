@@ -5,10 +5,19 @@
 
 @keyframes moveShip {
     0%{
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
     100%{
-        transform: translateX(200%);
+        transform: translateX(100%);
+    }
+}
+
+@keyframes moveProj {
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0%);
     }
 }
 
@@ -437,10 +446,32 @@ hr{
 }
 
 #ship{
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10000;
     height: 120%;
+}
+
+#proj1Background{
+    transform: translate(-200%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+}
+
+#proj2Background{
+    transform: translate(-200%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+}
+
+a{
+    color: white;
 }

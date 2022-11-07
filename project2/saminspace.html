@@ -67,6 +67,15 @@ a{
     }
 }
 
+@keyframes moveBack {
+    0%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
 #ship{
     transform: translateX(200%) scaleX(-1);
     position: fixed;
@@ -91,13 +100,36 @@ a{
   div #animation_container{
 	width: 100% !important;
 	height: 100% !important;
-	background-color: red !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
   }
 
-  div #canvas{
+  #stars{
+	position: fixed;
+	height: 100vh;
+	top: 0em;
+	left: 0em;
+	background-image: url(Asset3.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+  }
+
+  #homeBack{
+	transform: translateX(200%);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	height: 100%;
+	animation-fill-mode: forwards;
+}
+
+  /* div #canvas{
 	width: 100% !important;
 	height: 100% !important;
-  }
+  } */
 </style>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="saminspace.js?1667322190082"></script>
@@ -134,11 +166,14 @@ function handleComplete(evt,comp) {
 </head>
 <body onload="init();" style="margin:0px;">
 
+	<img src="stars.svg" alt="stars" id="stars">
+	<img src="homePageBackground.png" alt="homeBackground" id="homeBack">
+
 	<a href="../index.html#projects" id="back-link"><div class="back"><i class="fa-solid fa-arrow-left"></i></div></a>
 	<img src="ship.svg" alt="ship" id="ship">
 
 	<div class="outer-wrapper">
-		<div id="animation_container" style="background-color:rgba(153, 153, 153, 1.00);">
+		<div id="animation_container">
 			<canvas id="canvas" width="1000" height="600" style="position: absolute; display: block; background-color:rgba(153, 153, 153, 1.00);"></canvas>
 			<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1000px; height:600px; position: absolute; left: 0px; top: 0px; display: block;">
 			</div>
