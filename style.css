@@ -3,6 +3,21 @@
     src: url(goodtimes.otf);
 }
 
+@keyframes pulse {
+	0%{
+		transform: scale(0.90);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+	}
+	70%{
+		transform: scale(1);
+		box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0);
+	}
+	100%{
+		transform: scale(0.90);
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+
 @keyframes moveShip {
     0%{
         transform: translateX(-200%);
@@ -70,6 +85,9 @@
     scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
 a{
     text-decoration: none;
     color: white;
@@ -442,7 +460,7 @@ hr{
 
 .pro2-text p{
     margin-left: 3em;
-    width: 48%;
+    width: 45%;
 }
 
 #ship{
@@ -460,7 +478,7 @@ hr{
     top: 0;
     left: 0;
     z-index: 999;
-    height: 100%;
+    width: 100vw;
 }
 
 #proj2Background{
@@ -469,9 +487,35 @@ hr{
     top: 0;
     left: 0;
     z-index: 999;
-    height: 100%;
+    /* height: 100%; */
+    width: 100vw;
 }
 
 a{
     color: white;
+}
+
+#sound-outer{
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 6em;
+    right: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sound-outer:hover{
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+#sound-outer i{
+    color: black;
+    font-size: 2em;
 }

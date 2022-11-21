@@ -187,3 +187,22 @@ pro2_img.onclick = (e) => {
         window.location = "project2/saminspace.html";
     }, 5000);
 }
+
+//for sound:
+let sound = false;
+let audio;
+audio = new Audio('spaceship_ambient.mp3');
+
+let soundButton = document.getElementById("sound-outer");
+
+soundButton.onclick = () => {
+    if(sound == false){
+        soundButton.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+        audio.play();
+        sound = true;
+    }else{
+        soundButton.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+        audio.pause();
+        sound = false;
+    }
+}

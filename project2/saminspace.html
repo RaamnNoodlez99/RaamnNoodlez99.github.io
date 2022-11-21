@@ -76,6 +76,10 @@ a{
     }
 }
 
+html{
+	overflow: hidden;
+}
+
 #ship{
     transform: translateX(200%) scaleX(-1);
     position: fixed;
@@ -126,6 +130,23 @@ a{
 	animation-fill-mode: forwards;
 }
 
+.tv-box{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 17.3em;
+}
+
+#tv{
+	width: 2000px;
+	height: 1200px;
+	pointer-events: none;
+	z-index: 2;
+}
+
   /* div #canvas{
 	width: 100% !important;
 	height: 100% !important;
@@ -168,6 +189,10 @@ function handleComplete(evt,comp) {
 
 	<img src="stars.svg" alt="stars" id="stars">
 	<img src="homePageBackground.png" alt="homeBackground" id="homeBack">
+	<div class="tv-box">
+		<img src="bigtv.svg" alt="tv" id="tv">
+	</div>
+	
 
 	<a href="../index.html#projects" id="back-link"><div class="back"><i class="fa-solid fa-arrow-left"></i></div></a>
 	<img src="ship.svg" alt="ship" id="ship">
