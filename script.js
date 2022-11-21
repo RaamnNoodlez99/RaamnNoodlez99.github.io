@@ -1,5 +1,26 @@
 "use strict";
 
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY
+    };
+}
+
+let container = document.getElementById('container');
+
+let footer = document.getElementById("footer");
+
+let pageHeight = getOffset(footer).top
+
+
+console.log(pageHeight);
+
+pageHeight = pageHeight.bottom + 150;
+
+container.style.height = pageHeight + 'px';
+
 let text = document.getElementById('text');
 
 let stars1 = document.getElementById('stars1');
