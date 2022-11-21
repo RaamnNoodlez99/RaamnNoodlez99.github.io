@@ -345,6 +345,7 @@ hr{
     width: 4000px;
     height: 200px;
     transform: rotate(90deg);
+    margin-left: 8em;
 }
 
 .slider-list{
@@ -518,4 +519,17 @@ a{
 #sound-outer i{
     color: black;
     font-size: 2em;
+}
+
+footer{
+    width: 100vw;
+    height: 150px;
+    margin-top: 2em;
+    /* background-image: url("Asset3.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transform: rotate(0deg); */
+    background-color: rgba(0,0,0,0.5);
 }
