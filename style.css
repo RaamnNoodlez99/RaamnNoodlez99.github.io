@@ -588,7 +588,7 @@ footer{
 #topHand{
     width: 3%;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     right: 1.4em;
     /* animation-name: goUp;
     animation-duration: 1s;
