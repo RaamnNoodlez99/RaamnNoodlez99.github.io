@@ -41,6 +41,20 @@ backToTop.addEventListener('mouseover', function(){
     topHand.style.animation = "goUp 1500ms forwards"
 })
 
+backToTop.addEventListener('click', function(){
+    container.scrollIntoView({
+        behavior: 'smooth', // smooth scroll
+        block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+    })
+})
+
+handUp.addEventListener('click', function(){
+    container.scrollIntoView({
+        behavior: 'smooth', // smooth scroll
+        block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
+    })
+})
+
 backToTop.addEventListener('mouseout', function(){
     topHand.style.animation = "goDown 1500ms forwards"
 
