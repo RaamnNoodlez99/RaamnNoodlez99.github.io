@@ -32,6 +32,22 @@ let sam = document.getElementById('sam');
 let eric = document.getElementById('eric');
 let aboutDiv = document.getElementById('about');
 let donutMan = document.getElementById('donutMan');
+let backToTop = document.getElementById('backToTop');
+let hand = document.getElementById('hand-right');
+let handUp = document.getElementById('topHand');
+
+backToTop.addEventListener('mouseover', function(){
+    hand.style.opacity = 0;
+    topHand.style.animation = "goUp 1500ms forwards"
+})
+
+backToTop.addEventListener('mouseout', function(){
+    topHand.style.animation = "goDown 1500ms forwards"
+
+    setTimeout(function(){
+        hand.style.opacity = 1;
+    }, 1000);
+})
 
 let opacity = 1;
 let lastScrollTop = 0;

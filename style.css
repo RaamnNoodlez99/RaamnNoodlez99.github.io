@@ -3,6 +3,26 @@
     src: url(goodtimes.otf);
 }
 
+@keyframes goUp{
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-120%);
+    }
+}
+
+@keyframes goDown{
+    0%{
+        transform: translateY(-120%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+
 @keyframes pulse {
 	0%{
 		transform: scale(0.90);
@@ -451,6 +471,10 @@ hr{
     margin-left: -13em;
 }
 
+.pro1-text p{
+    padding-bottom: 1em;
+}
+
 .projects-pro2 .pro2-text{
     position: absolute;
     bottom: 5em;
@@ -462,6 +486,7 @@ hr{
 .pro2-text p{
     margin-left: 3em;
     width: 45%;
+    padding-top: 1em;
 }
 
 #ship{
@@ -524,14 +549,43 @@ a{
 footer{
     width: 100vw;
     height: 150px;
-    margin-top: 2em;
+    margin-top: 4em;
     /* background-image: url("Asset3.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     transform: rotate(0deg); */
-    background-color: rgba(0,0,0,0.5);
+    background-color: black;
+}
+
+#backToTop{
+    width: 20%;
+    position: absolute;
+    bottom: 4.7%;
+    right: 2em;
+    cursor: pointer;
+}
+
+#hand-right{
+    width: 4%;
+    position: absolute;
+    bottom: 131px;
+    right: 2.7em;
+    cursor: pointer;
+}
+
+#topHand{
+    width: 3%;
+    position: absolute;
+    bottom: 20px;
+    right: 2.9em;
+    /* animation-name: goUp;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards; */
+    z-index: -2;
+    cursor: pointer;
 }
 
 .container{
